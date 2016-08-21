@@ -19,7 +19,7 @@
 #include <libdevcore/Assertions.h>
 #include "VM.h"
 
-#if ETH_EVMJIT
+#if defined(ETH_EVMJIT) || defined(ETH_HERA)
 #include "JitVM.h"
 #include "SmartVM.h"
 #endif
@@ -45,7 +45,7 @@ std::unique_ptr<VMFace> VMFactory::create()
 
 std::unique_ptr<VMFace> VMFactory::create(VMKind _kind)
 {
-#if ETH_EVMJIT
+#if defined(ETH_EVMJIT) || defined(ETH_HERA)
 	switch (_kind)
 	{
 	default:
