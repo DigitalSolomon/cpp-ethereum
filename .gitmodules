@@ -5,3 +5,7 @@
 [submodule "test/tests"]
 	path = test/jsontests
 	url = https://github.com/ethereum/tests.git
+[submodule "hera"]
+	path = hera
+	url = https://github.com/ewasm/hera
+	branch = cmake
